@@ -19,7 +19,6 @@ class Rooms():
                 print(bar.rooms)
                 return
         return "All the roooms are full"
-        
     
 
     def check_out_guest(self, guest):

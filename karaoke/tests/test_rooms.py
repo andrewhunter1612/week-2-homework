@@ -4,6 +4,7 @@ from src.guest import *
 from src.songs import *
 from src.rooms import *
 from src.bar import *
+from src.drink_list import *
 
 class TestRooms(unittest.TestCase):
     def setUp(self):
@@ -11,6 +12,7 @@ class TestRooms(unittest.TestCase):
         self.song_name = Songs("song_name")
         self.room = Rooms(3)
         self.bar = Bar([self.room, self.room])
+        self.drinks = DrinkList("beer", 2, 20)
 
     
     def test_check_room_details(self):
