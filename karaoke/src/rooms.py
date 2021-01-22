@@ -16,9 +16,8 @@ class Rooms():
                 self.guests.append(guest)
                 guest.spend_cash(self.entry_fee)
                 bar.add_money_to_till(self.entry_fee)
-                print(bar.rooms)
                 return
-        return "All the roooms are full"
+        return "All the rooms are full"
     
 
     def check_out_guest(self, guest):

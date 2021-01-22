@@ -9,3 +9,6 @@ class Bar():
 
     def sell_drink(self, drink, number_sold = 1):
         self.add_money_to_till(number_sold*drink.price)
+        drink.reduce_number_available(number_sold)
+
+    
