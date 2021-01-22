@@ -1,8 +1,8 @@
 import random
+from src.bar import Bar
 
-class Rooms:
-    def __init__(self, number_of_rooms, entry_fee):
-        self.number_of_rooms = number_of_rooms
+class Rooms(Bar):
+    def __init__(self, entry_fee):
         self.entry_fee = entry_fee
         self.songs = []
         self.guests = []
@@ -11,9 +11,15 @@ class Rooms:
     def check_if_space_for_new_guests(self, new_guest_number = 1):
         return self.room_size > new_guest_number + len(self.guests)
 
-    def check_in_guest(self, guest): 
-        self.guests.append(guest)
-        guest.spend_cash(self.entry_fee)
+    def check_in_guest(self, guest, guest_number = 1): 
+        if self.check_if_space_for_new_guests(guest_number):
+            self.guests.append(guest)
+            guest.spend_cash(self.entry_fee)
+            
+        else:
+            return "No room in the inn"
+            #need to put them in a new room
+        
 
     def check_out_guest(self, guest):
         self.guests.remove(guest)

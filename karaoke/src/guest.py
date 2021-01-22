@@ -5,7 +5,7 @@ class Guest:
         self.favourite_song = favourite_song
     
     def spend_cash(self, bar):
-        self.cash -= bar.entry_fee
+        self.cash -= bar
 
     def get_total_cash(self):
         return self.cash

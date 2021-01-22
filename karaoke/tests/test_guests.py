@@ -8,7 +8,6 @@ class TestGuests(unittest.TestCase):
     def setUp(self):
         self.guest = Guest("Andrew", 10, "song_name")
         self.song_name = Songs("song_name")
-        # self.room = Room("")
 
     def test_guest_details(self):
         self.assertEqual("Andrew", self.guest.name)
@@ -19,5 +18,5 @@ class TestGuests(unittest.TestCase):
         self.assertNotEqual("not a song", self.guest.favourite_song)
 
         # self.song_name
-        # self.assertEqual("yay, my favourite song", self.guest.                  check_favourite_song(self.song_name))
+        # self.assertEqual("yay, my favourite song", self.guest.          check_favourite_song(self.song_name))
 
