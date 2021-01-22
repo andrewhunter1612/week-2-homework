@@ -1,4 +1,4 @@
-class Bar:
+class Bar():
     def __init__(self, rooms):
         self.rooms = rooms
         self.cash = 0

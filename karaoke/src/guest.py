@@ -11,5 +11,5 @@ class Guest:
         return self.cash
 
     def check_favourite_song(self, room):
-        if self.favourite_song == room.choose_random_song:
+        if self.favourite_song == room.play_random_song():
             return "yay, my favourite song"
