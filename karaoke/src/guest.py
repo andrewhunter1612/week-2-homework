@@ -13,3 +13,4 @@ class Guest:
     def check_favourite_song(self, room):
         if self.favourite_song == room.play_random_song():
             return "yay, my favourite song"
+            

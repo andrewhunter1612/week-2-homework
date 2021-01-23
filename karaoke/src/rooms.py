@@ -1,11 +1,11 @@
 import random
 
 class Rooms():
-    def __init__(self, entry_fee):
+    def __init__(self, entry_fee, room_size):
         self.entry_fee = entry_fee
         self.songs = []
         self.guests = []
-        self.room_size = 2
+        self.room_size = room_size
 
     def check_if_space_for_new_guests(self, new_guest_number = 1):
         return self.room_size > new_guest_number + len(self.guests)
@@ -18,7 +18,6 @@ class Rooms():
                 bar.add_money_to_till(self.entry_fee)
                 return
         return "All the rooms are full"
-    
 
     def check_out_guest(self, guest):
         self.guests.remove(guest)
